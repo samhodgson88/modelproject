@@ -22,6 +22,14 @@ for (let i = 0; i < btnsOpenModal.length; i++)
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
+//* event listener for the press down of indovidual keys. in this example escape key
+document.addEventListener('keydown', function (e) {
+    console.log(e.key);
+ if (e.key === 'Escape' && !Modal.classList.contains('hidden')) {
+    closeModal();
+ }  
+});
+
 
 
 
